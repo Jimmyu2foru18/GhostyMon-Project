@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ghostymon Battle</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="game-container">
+        <!-- Character Selection Screen -->
+        <div id="character-select" class="screen active">
+            <h1>Ghostymon Battle</h1>
+            <h2>Choose Your Starter Monster</h2>
+            <div class="monster-selection">
+                <div class="monster-option" data-monster="1">
+                    <div class="monster-preview">
+                        <img src="./images/Monster1.png" alt="The Infamous N ">
+                    </div>
+                    <div class="monster-details">
+                        <h3>The Infamous N</h3>
+                        <div class="type-badges">
+                            <span class="type-badge dark">Dark</span>
+                            <span class="type-badge steel">Steel</span>
+                        </div>
+                        <p>High attack, balanced defense</p>
+                        <ul class="stats-list">
+                            <li>HP: 120</li>
+                            <li>Mana: 65</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="monster-option" data-monster="2">
+                    <div class="monster-preview">
+                        <img src="./images/Monster2.png" alt="Cheese of Chair">
+                    </div>
+                    <div class="monster-details">
+                        <h3>Cheese of Chair</h3>
+                        <div class="type-badges">
+                            <span class="type-badge fire">Fire</span>
+                            <span class="type-badge psychic">Psychic</span>
+                        </div>
+                        <p>Strong special moves, medium HP</p>
+                        <ul class="stats-list">
+                            <li>HP: 100</li>
+                            <li>Mana: 80</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="monster-option" data-monster="3">
+                    <div class="monster-preview">
+                        <img src="./images/Monster3.png" alt="Ghosty of Beans">
+                    </div>
+                    <div class="monster-details">
+                        <h3>Ghosty of Beans</h3>
+                        <div class="type-badges">
+                            <span class="type-badge ice">Ice</span>
+                            <span class="type-badge grass">Grass</span>
+                        </div>
+                        <p>High HP, defensive specialist</p>
+                        <ul class="stats-list">
+                            <li>HP: 150</li>
+                            <li>Mana: 50</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Battle Arena Screen -->
+        <div id="battle-arena" class="screen">
+            <div class="battle-background"></div>
+            <div class="enemy-section">
+                <div class="monster-info">
+                    <div class="name-level"></div>
+                    <div class="status-bars">
+                        <div class="health-container">
+                            <div class="health-bar"></div>
+                            <div class="health-text"></div>
+                        </div>
+                        <div class="mana-container">
+                            <div class="mana-bar"></div>
+                            <div class="mana-text"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="monster-sprite enemy"></div>
+            </div>
+
+            <div class="player-section">
+                <div class="monster-sprite player"></div>
+                <div class="monster-info">
+                    <div class="name-level"></div>
+                    <div class="status-bars">
+                        <div class="health-container">
+                            <div class="health-bar"></div>
+                            <div class="health-text"></div>
+                        </div>
+                        <div class="mana-container">
+                            <div class="mana-bar"></div>
+                            <div class="mana-text"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="battle-controls">
+                <div class="moves-container">
+                    <button class="move-btn" data-move="0"></button>
+                    <button class="move-btn" data-move="1"></button>
+                    <button class="move-btn" data-move="2"></button>
+                    <button class="move-btn" data-move="3"></button>
+                </div>
+                <div class="battle-message"></div>
+            </div>
+        </div>
+
+        <!-- Victory Screen -->
+        <div id="victory-screen" class="screen">
+            <h1>Victory!</h1>
+            <div class="result-message"></div>
+            <button id="next-level-btn" class="action-btn">Continue to Next Level</button>
+        </div>
+
+        <!-- Game Over Screen -->
+        <div id="game-over-screen" class="screen">
+            <h1>Game Over</h1>
+            <div class="result-message"></div>
+            <button id="retry-btn" class="action-btn">Retry</button>
+        </div>
+
+        <!-- Game Complete Screen -->
+        <div id="game-complete-screen" class="screen">
+            <h1>Congratulations!</h1>
+            <div class="result-message">You have defeated all the ghost monsters including Henry!</div>
+            <button id="play-again-btn" class="action-btn">Play Again</button>
+        </div>
+    </div>
+
+    <script src="game.js"></script>
+</body>
+</html>
